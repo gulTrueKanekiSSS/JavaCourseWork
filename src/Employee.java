@@ -10,46 +10,57 @@ public class Employee {
     private static int idCounter  = 0;
     private final int idEmployee;
 
+    // getter for name field
     public String getName() {
         return name;
     }
 
+    // setter for name field
     public void setName(String name){
         this.name = name;
     }
 
+    // getter for surname field
     public String getSurname(){
         return surname;
     }
 
+    // setter for surname field
     public void setSurname(String surname){
         this.surname = surname;
     }
 
+    // getter for lastname field
     public String getLastname(){
         return lastname;
     }
 
+    // setter for lastname field
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
 
+    // getter for department field
     public int getDepartment(){
         return department;
     }
 
+    // setter for department field
     public void setDepartment(int department){
         this.department = department;
     }
 
+    // getter for salary field
     public int getEmployeeSalary(){
         return employeeSalary;
     }
 
+    //setter for salary field
     public void setEmployeeSalary(int employeeSalary){
         this.employeeSalary = employeeSalary;
     }
 
+    // constructor for Employee class
     public Employee(String name, String surname, String lastname, int department, int employeeSalary){
         this.name = name;
         this.surname = surname;
@@ -60,6 +71,7 @@ public class Employee {
         this.idEmployee = idCounter++;
     }
 
+    //to display information about an employee
     @Override
     public String toString() {
         return "Employee{" +
@@ -72,6 +84,7 @@ public class Employee {
                 '}';
     }
 
+    // equals contract
     @Override
     public boolean equals(Object o){
         if (this == o){
@@ -88,6 +101,7 @@ public class Employee {
                 Objects.equals(surname, otherEmp.surname);
     }
 
+    // hashCode contract
     @Override
     public int hashCode() {
         return Objects.hash(name, lastname);
